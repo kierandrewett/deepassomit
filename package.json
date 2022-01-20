@@ -1,0 +1,18 @@
+{
+  "name": "deepassomit",
+  "version": "1.0.1",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "https://github.com/EnderDev/deepassomit",
+  "author": "EnderDev <42723993+EnderDev@users.noreply.github.com>",
+  "scripts": {
+    "build": "tsc --lib es2020,dom -d index.ts",
+    "test": "yarn build && ts-node test.ts",
+    "prepublish": "yarn build"
+  },
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.5"
+  }
+}
