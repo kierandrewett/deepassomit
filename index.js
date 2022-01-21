@@ -1,6 +1,9 @@
 "use strict";
 exports.__esModule = true;
+var isPureObj = function (t) { return Object.prototype.toString.call(t) == "[object Object]"; };
 var omit = function (target, fields) {
+    if (!isPureObj(target))
+        return null;
     if (!Array.isArray(fields))
         fields = [fields];
     var keys = Object.keys(target);

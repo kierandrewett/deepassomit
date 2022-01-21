@@ -1,4 +1,8 @@
+const isPureObj = (t: any) => Object.prototype.toString.call(t) == "[object Object]";
+
 const omit = <T extends object, K extends string | string[]>(target: T, fields: K): { [P in Exclude<keyof T, K>]: T[P]; } => {
+    if(!isPureObj(target)) return null;
+    
     if(!Array.isArray(fields)) fields = [fields] as K;
 
     const keys = Object.keys(target);
